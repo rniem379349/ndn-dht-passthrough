@@ -1,0 +1,35 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('chord-ipv4', ['node', 'internet-stack', 'csma'])
+    module.source = [
+        'chord-ipv4.cc',
+        'chord-identifier.cc',
+        'chord-node.cc',
+        'chord-node-table.cc',
+        'chord-vnode.cc',
+        'chord-message.cc',
+        'chord-transaction.cc',
+        'dhash-object.cc',
+        'dhash-message.cc',
+        'dhash-connection.cc',
+        'dhash-transaction.cc',
+        'dhash-ipv4.cc',
+        ]
+    headers = bld.new_task_gen('ns3header')
+    headers.module = 'chord-ipv4'
+    headers.source = [
+        'chord-ipv4.h',
+        'chord-identifier.h',
+        'chord-node.h',
+        'chord-node-table.h',
+        'chord-vnode.h',
+        'chord-message.h',
+        'chord-transaction.h',
+        'dhash-object.h',
+        'dhash-message.h',
+        'dhash-connection.h',
+        'dhash-transaction.h',
+        'dhash-ipv4.h',
+        ]
+

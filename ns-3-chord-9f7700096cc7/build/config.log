@@ -1,0 +1,244 @@
+# project ns (3-dev) configured on Sun Oct 28 23:15:23 2018 by
+# waf 1.5.11 (abi 7, python 2070cf0 on linux2)
+# using ./waf
+#
+Checking for program g++,c++
+
+find program=['g++', 'c++'] paths=[] var='CXX' -> '/usr/bin/g++'
+
+Checking for program cpp
+
+find program=['cpp'] paths=[] var='CPP' -> '/usr/bin/cpp'
+
+Checking for program ar
+
+find program=['ar'] paths=[] var='AR' -> '/usr/bin/ar'
+
+Checking for program ranlib
+
+find program=['ranlib'] paths=[] var='RANLIB' -> '/usr/bin/ranlib'
+
+Checking for g++ 
+
+Checking for program pkg-config
+
+find program=['pkg-config'] paths=[] var='PKG_CONFIG' -> '/usr/bin/pkg-config'
+
+Checking for regression reference traces 
+
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cc -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '../test.cc', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for -Wno-error=deprecated-declarations support
+
+==>
+#include <stdio.h>
+int main() { return 0; }
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cc -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Wl,--soname=foo', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cc', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for -Wl,--soname=foo support
+
+Checking for header stdlib.h
+
+==>
+#include <stdlib.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for header signal.h
+
+==>
+#include <signal.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for header pthread.h
+
+==>
+
+#include <pthread.h>
+int main ()
+{
+   pthread_mutex_t m;
+   pthread_mutex_init (&m, NULL);
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-pthread', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog', '-pthread']
+Checking for high precision time implementation
+
+Checking for header stdint.h
+
+==>
+#include <stdint.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for header inttypes.h
+
+==>
+#include <inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for header sys/inttypes.h
+
+==>
+#include <sys/inttypes.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
+compilation terminated.
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+command returned 'Traceback (most recent call last):\n  File "/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/.waf-1.5.11-e59024de37e231036fc8c065a6fb3048/wafadmin/Tools/config_c.py", line 349, in run_c_code\n    bld.compile()\n  File "/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/.waf-1.5.11-e59024de37e231036fc8c065a6fb3048/wafadmin/Build.py", line 170, in compile\n    raise BuildError(self,self.task_manager.tasks_done)\nBuildError: Build failed\n -> task failed (err #1): \n\t{task: cxx test.cpp -> test_1.o}\n'Checking for library rt
+
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog', '-Wl,-Bdynamic', '-lrt']
+Checking for header netpacket/packet.h
+
+==>
+#include <netpacket/packet.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for header linux/if_tun.h
+
+==>
+#include <linux/if_tun.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for pkg-config flags for GTK_CONFIG_STORE 
+
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-2.0 >= 2.12']: '' (exit code 1)
+Checking for pkg-config flags for LIBXML2 
+
+['/usr/bin/pkg-config', '--cflags', '--libs', 'libxml-2.0 >= 2.6']: '' (exit code 1)
+Checking for library sqlite3
+
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog', '-Wl,-Bdynamic', '-lsqlite3']
+Checking for NSC location 
+
+Checking for header sys/socket.h
+
+==>
+#include <sys/socket.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for header netinet/in.h
+
+==>
+#include <netinet/in.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/debug/test_1.o
+[0m['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Wno-error=deprecated-declarations', '-Idebug', '-I..', '-D_DEBUG', '-DRUN_SELF_TESTS', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', 'debug/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/debug/test_1.o -> build/.conf_check_0/testbuild/debug/testprog
+[0m['/usr/bin/g++', 'debug/test_1.o', '-o', '/home/asan/ndnSIM/ns-3-chord-9f7700096cc7/build/.conf_check_0/testbuild/debug/testprog']
+Checking for program sudo
+
+find program=['sudo'] paths=[] var='SUDO' -> '/usr/bin/sudo'
+
+Checking for program hg
+
+find program=['hg'] paths=[] var='MERCURIAL' -> ''
+
+Checking for program valgrind
+
+find program=['valgrind'] paths=[] var='VALGRIND' -> ''
+
+Checking for pkg-config flags for GSL 
+
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']: '' (exit code 1)

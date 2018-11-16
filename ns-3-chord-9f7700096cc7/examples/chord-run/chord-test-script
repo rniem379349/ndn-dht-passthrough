@@ -1,0 +1,140 @@
+Time 60000
+1 InsertVNode N1V1
+2 InsertVNode N2V1
+Time 60000
+2 TraceRing N2V1
+Time 60000
+3 InsertVNode N3V1
+Time 60000
+5 InsertVNode N5V1
+Time 60000
+4 InsertVNode N4V1
+Time 60000
+6 InsertVNode N6V1
+Time 60000
+7 InsertVNode N7V1
+Time 60000
+8 InsertVNode N8V1
+Time 60000
+8 TraceRing N8V1
+Time 60000
+9 InsertVNode N9V1
+Time 60000
+10 InsertVNode N10V1
+Time 60000
+11 InsertVNode N11V1
+Time 60000
+11 TraceRing N11V1
+Time 60000
+12 InsertVNode N12V1
+Time 60000
+13 InsertVNode N13V1
+Time 60000
+14 InsertVNode N14V1
+Time 60000
+15 InsertVNode N15V1
+Time 60000
+16 InsertVNode N16V1
+Time 60000
+17 InsertVNode N17V1
+Time 60000
+18 InsertVNode N18V1
+Time 60000
+19 InsertVNode N19V1
+Time 60000
+19 TraceRing N19V1
+Time 60000
+
+echo-----------Inject_Data---------------
+1 Insert Boston Celtics
+Time 1000
+5 Insert NewJersey Nets
+Time 1000
+9 Insert NewYork Knicks
+Time 1000
+13 Insert Philadelphia 76ers
+Time 1000
+17 Insert Toronto Raptors
+Time 1000
+2 Insert Chicago Bulls
+Time 1000
+6 Insert Cleveland Cavaliers
+Time 1000
+10 Insert Detroit Pistons
+Time 1000
+14 Insert Indiana Pacers
+Time 1000
+18 Insert Milwaukee Bucks
+Time 1000
+3 Insert Atlanta Hawks
+Time 1000
+7 Insert Charlotte Bobcats
+Time 1000
+11 Insert Miami Heat
+Time 1000
+15 Insert Orlando Magic
+Time 1000
+19 Insert Washington Wizards
+Time 1000
+4 Insert Dallas Mavericks
+Time 1000
+8 Insert Houston Rockets
+Time 1000
+12 Insert Memphis Grizzlies
+Time 1000
+16 Insert NewOrleans Hornets
+Time 1000
+19 Insert SanAntonio Spurs
+Time 1000
+1 Insert GoldenState Warriors
+Time 1000
+2 Insert LosAngeles Clippers
+Time 1000
+3 Insert LosAngeles Lakers
+Time 1000
+4 Insert Phoenix Suns
+Time 1000
+5 Insert Sacramento Kings
+Time 1000
+6 Insert Denver Nuggets
+Time 1000
+7 Insert Minnesota Timberwolves
+Time 1000
+8 Insert Portland TrailBlazers
+Time 1000
+9 Insert OklahomaCity Thunder
+Time 1000
+10 Insert Utah Jazz
+
+
+echo-----------Lookup------------
+Time 60000
+1 Lookup LosAngeles
+Time 30000
+5 Lookup LosAngeles
+Time 30000
+8 Lookup Philadelphia
+Time 30000
+
+echo--------------Retrieve_Data-------------
+1 Retrieve LosAngeles
+Time 10000
+5 Retrieve LosAngeles
+Time 10000
+9 Retrieve LosAngeles
+Time 10000
+13 Retrieve LosAngeles
+Time 10000
+17 Retrieve LosAngeles
+Time 10000
+8 Retrieve Philadelphia
+Time 10000
+9 Retrieve Boston
+Time 10000
+10 Retrieve Dallas
+Time 10000
+11 Retrieve Houston
+Time 10000
+12 Retrieve Portland
+Time 30000
+
