@@ -262,6 +262,7 @@ ChordRun::ProcessCommandTokens (std::vector<std::string> tokens, Time time)
   std::istringstream sin (*iterator);
   uint16_t nodeNumber;
   sin >> nodeNumber;
+std::cout<<nodeNumber;
   //this command can be in script file
   if (*iterator == "quit")
   {
@@ -271,6 +272,7 @@ ChordRun::ProcessCommandTokens (std::vector<std::string> tokens, Time time)
   }
   else if (tokens.size() < 2)
   {
+        //std::cout<<"stop  ";
     return;
   }
   Ptr<ChordIpv4> chordApplication = m_nodeContainer.Get(nodeNumber)->GetApplication(0)->GetObject<ChordIpv4> ();
@@ -278,8 +280,10 @@ ChordRun::ProcessCommandTokens (std::vector<std::string> tokens, Time time)
   iterator++;
   if (*iterator == "InsertVNode")
   {
+std::cout<<tokens.size()<<std::endl;
     if (tokens.size() < 3)
     { 
+std::cout<<"stop  ";
       return;
     }
     //extract node name
@@ -439,6 +443,9 @@ ChordRun::Insert (Ptr<ChordIpv4> chordApplication, std::string resourceName, std
   const unsigned char* message = (const unsigned char*) resourceName.c_str();
   SHA1 (message , resourceName.length() , md);
   unsigned char* value = (unsigned char *)(resourceValue.c_str());
+std::cout<<"value"<<value<<std::endl;
+std::cout<<"lentgh"<<resourceValue.length()<<std::endl;
+std::cout<<"1"<<std::endl;
   chordApplication->Insert(md, 20, value, resourceValue.length());
   free (md);
 }
@@ -649,8 +656,10 @@ ChordRun::PrintHexArray (uint8_t* array, uint32_t size, std::ostream &os)
  int 
  main (int argc, char *argv[])
  {
-   uint16_t nodes;
-   uint16_t bootStrapNodeNum;
+   uint16_t nodes=100;
+   argc=3;
+   
+   uint16_t bootStrapNodeNum=10;
    std::string scriptFile = "";
    if (argc < 3)
    {
@@ -659,11 +668,11 @@ ChordRun::PrintHexArray (uint8_t* array, uint32_t size, std::ostream &os)
    }
    else
    {
-    nodes = atoi(argv[1]);
-    bootStrapNodeNum = atoi(argv[2]);
+    //nodes = atoi(argv[1]);
+    //bootStrapNodeNum = atoi(argv[2]);
     if (argc == 4)
     {
-      scriptFile = argv[3];
+      //scriptFile = argv[3];
     }
     std::cout << "Number of nodes to simulate: " << (uint16_t) nodes << "\n";
    }
@@ -688,7 +697,9 @@ ChordRun::PrintHexArray (uint8_t* array, uint32_t size, std::ostream &os)
    // run-time, via command-line arguments
    //
    CommandLine cmd;
-   cmd.Parse (argc, argv);
+   //cmd.Parse (argc, argv);
+
+
    //
    // Explicitly create the nodes required by the topology (shown above).
    //
